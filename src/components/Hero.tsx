@@ -49,7 +49,7 @@ const Hero: React.FC = memo(() => {
           <div className="mt-10 flex flex-col md:flex-row gap-4">
             <Button 
               className="bg-rebuttl-blue hover:bg-rebuttl-blue/90 text-white h-12 px-8 text-lg relative overflow-hidden group"
-              onClick={handleScrollToFeatures}
+              onClick={() => window.open('https://app.lumi6.com/signup', '_blank')}
             >
               <span className="relative z-10">Try Lumi6 Free</span>
               <span className="absolute inset-0 bg-gradient-to-r from-rebuttl-blue via-rebuttl-purple to-rebuttl-blue bg-size-200 bg-pos-0 group-hover:bg-pos-100 transition-all duration-500"></span>
@@ -57,7 +57,7 @@ const Hero: React.FC = memo(() => {
             <Button 
               variant="outline"
               className="h-12 px-8 text-lg border-rebuttl-blue text-rebuttl-blue hover:bg-rebuttl-blue/10"
-              onClick={handleScrollToExplainer}
+              onClick={() => window.open('https://app.lumi6.com/signup', '_blank')}
             >
               See It in Action →
             </Button>

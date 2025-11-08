@@ -56,10 +56,17 @@ const Navbar: React.FC = () => {
         </div>
         
         <div className="hidden md:flex gap-4">
-          <Button variant="ghost" className="text-gray-700 hover:text-rebuttl-blue">
+          <Button 
+            variant="ghost" 
+            className="text-gray-700 hover:text-rebuttl-blue"
+            onClick={() => window.open('https://app.lumi6.com/login', '_blank')}
+          >
             Sign In
           </Button>
-          <Button className="bg-rebuttl-blue hover:bg-rebuttl-blue/90 text-white">
+          <Button 
+            className="bg-rebuttl-blue hover:bg-rebuttl-blue/90 text-white"
+            onClick={() => window.open('https://app.lumi6.com/signup', '_blank')}
+          >
             Sign Up
           </Button>
         </div>
@@ -87,10 +94,23 @@ const Navbar: React.FC = () => {
           <Link to="/#how-it-works" className="font-medium text-gray-700 hover:text-rebuttl-blue py-2 text-center" onClick={() => setMobileMenuOpen(false)}>How it works</Link>
           <Link to="/blogs" className="font-medium text-gray-700 hover:text-rebuttl-blue py-2 text-center" onClick={() => setMobileMenuOpen(false)}>Blogs</Link>
             <div className="flex flex-col gap-2 pt-2 border-t border-gray-200">
-              <Button variant="ghost" className="text-gray-700 hover:text-rebuttl-blue" onClick={() => setMobileMenuOpen(false)}>
+              <Button 
+                variant="ghost" 
+                className="text-gray-700 hover:text-rebuttl-blue" 
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  window.open('https://app.lumi6.com/login', '_blank');
+                }}
+              >
                 Sign In
               </Button>
-              <Button className="bg-rebuttl-blue hover:bg-rebuttl-blue/90 text-white" onClick={() => setMobileMenuOpen(false)}>
+              <Button 
+                className="bg-rebuttl-blue hover:bg-rebuttl-blue/90 text-white" 
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  window.open('https://app.lumi6.com/signup', '_blank');
+                }}
+              >
                 Sign Up
               </Button>
             </div>

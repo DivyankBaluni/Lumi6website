@@ -236,7 +236,14 @@ const Features: React.FC = () => {
         </div>
 
         <div className="text-center mt-12">
-          <a href="#cta" className="inline-block bg-rebuttl-blue text-white px-6 py-3 rounded-md hover:bg-rebuttl-blue/90 transition-colors">Start Your Free EQ Report</a>
+          <a 
+            href="https://app.lumi6.com/signup" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-block bg-rebuttl-blue text-white px-6 py-3 rounded-md hover:bg-rebuttl-blue/90 transition-colors"
+          >
+            Start Your Free EQ Report
+          </a>
         </div>
       </div>
     </section>

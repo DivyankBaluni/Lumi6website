@@ -41,7 +41,14 @@ const SectionContinuous: React.FC = () => {
               <div className="text-gray-800">Balance constructive points with specific appreciation to reinforce strengths.</div>
             </div>
             <div className="pt-2">
-              <a href="#cta" className="inline-block bg-rebuttl-blue text-white px-6 py-3 rounded-md hover:bg-rebuttl-blue/90 transition-colors">See Sample Dashboard</a>
+              <a 
+                href="https://app.lumi6.com/signup" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block bg-rebuttl-blue text-white px-6 py-3 rounded-md hover:bg-rebuttl-blue/90 transition-colors"
+              >
+                See Sample Dashboard
+              </a>
             </div>
           </div>
         </div>
