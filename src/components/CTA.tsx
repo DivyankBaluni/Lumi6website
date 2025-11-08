@@ -22,14 +22,17 @@ const CTA: React.FC = () => {
         </p>
         
         <div className="flex flex-col md:flex-row justify-center gap-4">
-          <Button className="bg-white text-rebuttl-navy hover:bg-gray-100 h-12 px-8 text-lg group relative overflow-hidden">
+          <Button 
+            className="bg-white text-rebuttl-navy hover:bg-gray-100 h-12 px-8 text-lg group relative overflow-hidden"
+            onClick={() => window.open('https://tally.so/r/wM0JlY', '_blank')}
+          >
             <span className="relative z-10">Talk to sales</span>
             <span className="absolute inset-0 w-0 bg-gradient-to-r from-rebuttl-blue to-rebuttl-purple opacity-10 group-hover:w-full transition-all duration-300"></span>
           </Button>
           <Button 
             variant="outline" 
             className="border-white text-rebuttl-blue hover:bg-white hover:text-rebuttl-navy h-12 px-8 text-lg transition-colors"
-            onClick={() => window.open('https://app.lumi6.com/signup', '_blank')}
+            onClick={() => window.open('https://tally.so/r/wM0JlY', '_blank')}
           >
             <span>Learn More</span>
           </Button>
