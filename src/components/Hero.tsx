@@ -2,7 +2,6 @@
 import React, { memo, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
-import Logo from '@/components/ui/logo';
 
 const Hero: React.FC = memo(() => {
   const handleScrollToFeatures = useCallback(() => {
@@ -21,8 +20,6 @@ const Hero: React.FC = memo(() => {
     <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center text-center">
-          <Logo size="lg" className="mb-8 animate-scale-in-instant" />
-          
           <div className="relative">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight md:leading-tight bg-gradient-to-r from-rebuttl-blue via-rebuttl-purple to-rebuttl-orange bg-clip-text text-transparent max-w-4xl">
               <span className="relative inline-block">
