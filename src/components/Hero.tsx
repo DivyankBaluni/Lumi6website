@@ -20,6 +20,12 @@ const Hero: React.FC = memo(() => {
     <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center text-center">
+          <h2 className="text-2xl md:text-3xl font-semibold text-gray-700 mb-2">
+            The Complete EQ Platform for Modern Teams
+          </h2>
+          <p className="text-lg md:text-xl text-gray-600 mb-6 max-w-2xl">
+            Complete emotional intelligence platform for modern teams.
+          </p>
           <div className="relative">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight md:leading-tight bg-gradient-to-r from-rebuttl-blue via-rebuttl-purple to-rebuttl-orange bg-clip-text text-transparent max-w-4xl">
               <span className="relative inline-block">
