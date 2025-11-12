@@ -17,7 +17,7 @@ const Logo: React.FC<LogoProps> = ({ className, size = 'md' }) => {
   return (
     <div className={cn('relative', sizeClasses[size], className)}>
       {/* Text logo - clean and crisp */}
-      <span className="font-bold tracking-tighter bg-gradient-to-r from-rebuttl-orange via-rebuttl-red to-rebuttl-purple bg-clip-text text-transparent">
+      <span className="font-bold tracking-tighter text-gray-900">
         Lumi6
       </span>
     </div>
