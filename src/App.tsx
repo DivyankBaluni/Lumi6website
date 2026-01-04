@@ -9,6 +9,8 @@ import React, { useEffect, Suspense, lazy } from "react";
 const Index = lazy(() => import("./pages/Index"));
 const Products = lazy(() => import("./pages/Products"));
 const Blogs = lazy(() => import("./pages/Blogs"));
+const Education = lazy(() => import("./pages/Education"));
+const Individuals = lazy(() => import("./pages/Individuals"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 // Loading component
@@ -72,6 +74,8 @@ const App = () => {
               <Route path="/" element={<Index />} />
               <Route path="/products" element={<Products />} />
               <Route path="/blogs" element={<Blogs />} />
+              <Route path="/education" element={<Education />} />
+              <Route path="/individuals" element={<Individuals />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
