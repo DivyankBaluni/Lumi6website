@@ -822,37 +822,10 @@ const Features: React.FC = () => {
     <section id="features" className="py-16 md:py-24 bg-gradient-to-b from-rebuttl-lightBg to-white">
       <div className="container mx-auto px-4">
         <div id="explainer" className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 inline-block relative">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">
             <span className="bg-gradient-to-r from-rebuttl-blue to-rebuttl-purple bg-clip-text text-transparent">
               The Complete EQ Platform for Modern Teams
             </span>
-            {/* Animated underline */}
-            <svg
-              className="absolute -bottom-2 left-0 w-full h-3"
-              viewBox="0 0 400 12"
-              preserveAspectRatio="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0 6 Q100 2, 200 6 T400 6"
-                stroke="url(#gradient)"
-                strokeWidth="4"
-                fill="none"
-                strokeLinecap="round"
-                style={{
-                  strokeDasharray: '500',
-                  strokeDashoffset: '500',
-                  animation: 'drawUnderline 1.5s ease-out 0.5s forwards'
-                }}
-              />
-              <defs>
-                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="#4263EB" />
-                  <stop offset="50%" stopColor="#6366F1" />
-                  <stop offset="100%" stopColor="#F97316" />
-                </linearGradient>
-              </defs>
-            </svg>
           </h2>
           <p className="mt-6 text-xl text-gray-600 max-w-3xl mx-auto">
             Complete emotional intelligence platform for modern teams.

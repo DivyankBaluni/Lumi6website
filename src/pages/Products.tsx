@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import Navbar from '@/components/Navbar';
+import Breadcrumbs from '@/components/ui/Breadcrumbs';
 
 const Products: React.FC = () => {
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set());
@@ -110,6 +111,15 @@ const Products: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+      <Navbar />
+
+      {/* Breadcrumbs - Absolute positioned to not take space */}
+      <div className="absolute top-16 left-0 right-0 z-40 pointer-events-none">
+        <div className="container mx-auto px-4 pointer-events-auto">
+          <Breadcrumbs />
+        </div>
+      </div>
+
       {/* Floating Navigation Indicator */}
       <div className="fixed right-8 top-1/2 transform -translate-y-1/2 z-50 hidden lg:block">
         <div className="flex flex-col gap-3">

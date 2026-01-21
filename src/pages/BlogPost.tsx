@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Calendar, Clock, User, ArrowLeft, Share2 } from 'lucide-react';
+import Breadcrumbs from '@/components/ui/Breadcrumbs';
 
 interface BlogSection {
   type: 'paragraph' | 'heading' | 'subheading' | 'list';
@@ -375,19 +376,27 @@ const BlogPost: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <Navbar />
+
+      {/* Breadcrumbs - Absolute positioned to not take space */}
+      <div className="absolute top-16 left-0 right-0 z-40 pointer-events-none">
+        <div className="container mx-auto px-4 pointer-events-auto">
+          <Breadcrumbs />
+        </div>
+      </div>
+
       <main className="flex-grow pt-20">
         {/* Hero Section */}
         <div className="relative h-[50vh] min-h-[400px] overflow-hidden">
-          <img 
-            src={blog.image} 
+          <img
+            src={blog.image}
             alt={blog.title}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
           <div className="absolute bottom-0 left-0 right-0 p-8 md:p-16">
             <div className="container mx-auto">
-              <Link 
-                to="/blogs" 
+              <Link
+                to="/blogs"
                 className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-colors mb-6"
               >
                 <ArrowLeft className="w-4 h-4" />
@@ -444,7 +453,7 @@ const BlogPost: React.FC = () => {
                   <Share2 className="w-5 h-5" />
                   Share this article
                 </button>
-                <Link 
+                <Link
                   to="/blogs"
                   className="bg-rebuttl-blue hover:bg-rebuttl-blue/90 text-white px-8 py-4 rounded-lg font-bold transition-colors"
                 >
@@ -462,7 +471,7 @@ const BlogPost: React.FC = () => {
             <p className="text-white/80 mb-8 max-w-2xl mx-auto text-lg">
               Discover how Lumi6 can help your organization build emotional intelligence at scale.
             </p>
-            <button 
+            <button
               onClick={() => window.open('https://app.lumi6.com/signup', '_blank')}
               className="bg-white hover:bg-gray-100 text-rebuttl-blue px-8 py-4 rounded-lg font-bold transition-colors text-lg"
             >

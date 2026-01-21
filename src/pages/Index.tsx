@@ -1,8 +1,9 @@
 
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import LazyImage from '@/components/LazyImage';
+import SplashScreen from '@/components/ui/SplashScreen';
 
 // Lazy load non-critical components
 const Features = lazy(() => import('@/components/Features'));
@@ -19,35 +20,44 @@ const SectionLoader = () => (
 );
 
 const Index: React.FC = () => {
+  const [showSplash, setShowSplash] = useState(true);
+  const [pageVisible, setPageVisible] = useState(false);
+
+  const handleSplashComplete = () => {
+    setShowSplash(false);
+    // Start fading in the page slightly before splash completes
+    setTimeout(() => setPageVisible(true), 100);
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-rebuttl-lightBg">
-      <Navbar />
-      <main>
-        <Hero />
-        <Suspense fallback={<SectionLoader />}>
-          <Features />
+        <Navbar />
+        <main>
+          <Hero />
+          <Suspense fallback={<SectionLoader />}>
+            <Features />
+          </Suspense>
+          <Suspense fallback={<SectionLoader />}>
+            <HowItWorks />
+          </Suspense>
+          <Suspense fallback={<SectionLoader />}>
+            <SectionContinuous />
+          </Suspense>
+          <Suspense fallback={<SectionLoader />}>
+            <SectionInsights />
+          </Suspense>
+          <Suspense fallback={<SectionLoader />}>
+            <SectionProof />
+          </Suspense>
+          <Suspense fallback={<SectionLoader />}>
+            <CTA />
+          </Suspense>
+        </main>
+        <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse"></div>}>
+          <Footer />
         </Suspense>
-        <Suspense fallback={<SectionLoader />}>
-          <HowItWorks />
-        </Suspense>
-        <Suspense fallback={<SectionLoader />}>
-          <SectionContinuous />
-        </Suspense>
-        <Suspense fallback={<SectionLoader />}>
-          <SectionInsights />
-        </Suspense>
-        <Suspense fallback={<SectionLoader />}>
-          <SectionProof />
-        </Suspense>
-        <Suspense fallback={<SectionLoader />}>
-          <CTA />
-        </Suspense>
-      </main>
-      <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse"></div>}>
-        <Footer />
-      </Suspense>
-    </div>
-  );
+      </div>
+      );
 };
 
-export default Index;
+      export default Index;

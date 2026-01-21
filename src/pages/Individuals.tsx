@@ -3,11 +3,20 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
 import { User, TrendingUp, Heart, Target, Users, Award, Briefcase, Lightbulb } from 'lucide-react';
+import Breadcrumbs from '@/components/ui/Breadcrumbs';
 
 const Individuals: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-rebuttl-lightBg">
       <Navbar />
+
+      {/* Breadcrumbs - Absolute positioned to not take space */}
+      <div className="absolute top-16 left-0 right-0 z-40 pointer-events-none">
+        <div className="container mx-auto px-4 pointer-events-auto">
+          <Breadcrumbs />
+        </div>
+      </div>
+
       <main className="flex-grow pt-24">
         {/* Hero Section */}
         <section className="py-16 md:py-24 bg-gradient-to-b from-rebuttl-purple/10 to-white">
